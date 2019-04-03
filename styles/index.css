@@ -1,0 +1,28 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+}
+.layout > .pyg_header {
+  height: 45px;
+  padding: 5px;
+  background-color: #eee;
+}
+.layout > .pyg_content {
+  flex: 1;
+  overflow: scroll;
+}
+.layout > .pyg_footer {
+  height: 50px;
+}
+.layout > .pyg_footer .fa-shopping-cart {
+  font-size: 24px;
+}
+.layout > .pyg_footer .pyg_cart {
+  font-size: 12px;
+  display: block;
+}
