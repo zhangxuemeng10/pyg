@@ -3,26 +3,80 @@
   height: 100vh;
   max-width: 640px;
   margin: 0 auto;
-  background-color: pink;
   display: flex;
   flex-direction: column;
 }
-.layout > .pyg_header {
+.pyg_header {
   height: 45px;
   padding: 5px;
   background-color: #eee;
 }
-.layout > .pyg_content {
+.pyg_content {
   flex: 1;
   overflow: scroll;
 }
-.layout > .pyg_footer {
+.pyg_goodsList {
+  padding: 10px;
+}
+.pyg_goodsList .pyg_pbox {
+  width: 100%;
+  padding-bottom: 5px;
+}
+.pyg_goodsList .pyg_pbox > img {
+  width: 100%;
+  display: block;
+}
+.pyg_goodsList .pyg_pbox > .pyg_sbox {
+  width: 49%;
+  margin-top: 10px;
+  float: left;
+  background-color: #fff;
+}
+.pyg_goodsList .pyg_pbox > .pyg_sbox > .pyg_good {
+  width: 100%;
+}
+.pyg_goodsList .pyg_pbox > .pyg_sbox > .pyg_good > img {
+  width: 100%;
+  display: block;
+}
+.pyg_goodsList .pyg_pbox > .pyg_sbox > .pyg_good > .pyg_desc {
+  color: #333;
+  font-size: 13px;
+  margin: 5px 0;
+}
+.pyg_goodsList .pyg_pbox > .pyg_sbox > .pyg_good > .pyg_price {
+  color: red;
+}
+.pyg_goodsList .pyg_pbox > .pyg_sbox > .pyg_btncate {
+  width: 80%;
+  display: block;
+  margin: 5px auto;
+}
+.pyg_goodsList .pyg_pbox > .pyg_sbox:nth-of-type(even) {
+  margin-left: 2%;
+}
+.pyg_nav {
+  padding: 10px;
+  display: flex;
+  background-color: #fff;
+}
+.pyg_nav > a {
+  flex: 1;
+  text-align: center;
+  color: #333;
+  font-size: 12px;
+}
+.pyg_nav > a > img {
+  width: 50%;
+  display: inline-block;
+}
+.pyg_footer {
   height: 50px;
 }
-.layout > .pyg_footer .fa-shopping-cart {
+.pyg_footer .fa-shopping-cart {
   font-size: 24px;
 }
-.layout > .pyg_footer .pyg_cart {
+.pyg_footer .pyg_cart {
   font-size: 12px;
   display: block;
 }
