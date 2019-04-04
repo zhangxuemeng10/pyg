@@ -26,7 +26,6 @@ $(function () {
 
       rightCateList(0)
 
-
     } else {
       getCateList()
     }
@@ -86,7 +85,7 @@ $(function () {
     $('.rightList img').on('load', function () {
       imgCount--
       if (imgCount == 0) {
-        $('body').removeClass('.loading')
+        $('body').removeClass('loadding')
         var myScroll = new IScroll('.right');
 
       }
