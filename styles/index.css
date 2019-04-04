@@ -11,6 +11,13 @@
   padding: 5px;
   background-color: #eee;
 }
+.pyg_footer {
+  height: 50px;
+}
+.pyg_footer .pyg_cart {
+  font-size: 12px;
+  display: block;
+}
 .pyg_content {
   flex: 1;
   overflow: scroll;
@@ -43,6 +50,7 @@
   color: #333;
   font-size: 13px;
   margin: 5px 0;
+  height: 42px;
 }
 .pyg_goodsList .pyg_pbox > .pyg_sbox > .pyg_good > .pyg_price {
   color: red;
@@ -69,14 +77,4 @@
 .pyg_nav > a > img {
   width: 50%;
   display: inline-block;
-}
-.pyg_footer {
-  height: 50px;
-}
-.pyg_footer .fa-shopping-cart {
-  font-size: 24px;
-}
-.pyg_footer .pyg_cart {
-  font-size: 12px;
-  display: block;
 }
