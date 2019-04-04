@@ -1,0 +1,43 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.pyg_header {
+  height: 45px;
+  padding: 5px;
+  background-color: #eee;
+}
+.pyg_footer {
+  height: 50px;
+}
+.pyg_footer .pyg_cart {
+  font-size: 12px;
+  display: block;
+}
+.loadding::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .5;
+  content: "";
+  z-index: 100;
+}
+.loadding::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -50px;
+  font-size: 100px;
+  color: #0094ff;
+  content: "\f013";
+  z-index: 101;
+  animation: fa-spin 1s infinite linear;
+}
