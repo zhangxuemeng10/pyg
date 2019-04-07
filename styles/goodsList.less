@@ -1,0 +1,71 @@
+@import './common';
+@import './reset';
+
+#header {
+  background-color: rgb(0, 148, 255);
+
+  .mui-icon,
+  .mui-title {
+    color: #fff
+  }
+}
+
+.goodslist {
+
+  li {
+    background-color: #fff;
+    margin-bottom: 5px;
+
+    a {
+      display: flex;
+      width: 100%;
+      height: 100%;
+
+      >.item_left {
+        width: 50%;
+
+        >img {
+          width: 70%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      >.item_right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        >.goods_name {
+          color: #999;
+          font-size: 13px;
+        }
+
+        >.goods_price {
+          color: red;
+        }
+      }
+    }
+  }
+
+}
+
+.search_bar {
+  margin:5px;
+  position: relative;
+
+  .query_btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: rgb(0, 148, 255);
+    // width: 100%;
+    height: 40px;
+  }
+}
+.searchList{
+  li{
+    background-color: #fff;
+  }
+}

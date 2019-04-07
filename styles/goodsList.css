@@ -1,0 +1,195 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.pyg_header {
+  height: 45px;
+  padding: 5px;
+  background-color: #eee;
+}
+.pyg_footer {
+  height: 50px;
+}
+.pyg_footer .pyg_cart {
+  font-size: 12px;
+  display: block;
+}
+.loadding::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .5;
+  content: "";
+  z-index: 100;
+}
+.loadding::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -50px;
+  font-size: 100px;
+  color: #0094ff;
+  content: "\f013";
+  z-index: 101;
+  animation: fa-spin 1s infinite linear;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ol,
+ul {
+  list-style: none;
+}
+.clearfix::before {
+  content: " ";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+#header {
+  background-color: #0094ff;
+}
+#header .mui-icon,
+#header .mui-title {
+  color: #fff;
+}
+.goodslist li {
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+.goodslist li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.goodslist li a > .item_left {
+  width: 50%;
+}
+.goodslist li a > .item_left > img {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+.goodslist li a > .item_right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.goodslist li a > .item_right > .goods_name {
+  color: #999;
+  font-size: 13px;
+}
+.goodslist li a > .item_right > .goods_price {
+  color: red;
+}
+.search_bar {
+  margin: 5px;
+  position: relative;
+}
+.search_bar .query_btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #0094ff;
+  height: 40px;
+}
+.searchList li {
+  background-color: #fff;
+}
