@@ -31,7 +31,7 @@ $(function () {
       info.goods_small_logo = result.data.goods_small_logo
       info.goods_weight = result.data.goods_weight
 
-      // console.log(result)
+      console.log(result)
       var html = template('gdTemp', result.data)
       $('.mui-scroll').html(html)
       mui('.mui-slider').slider({

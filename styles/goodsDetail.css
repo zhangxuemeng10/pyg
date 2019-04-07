@@ -145,6 +145,8 @@ ul {
 .pyg_content {
   overflow: hidden;
   padding-top: 45px;
+  flex: 1;
+  position: relative;
 }
 .pyg_content .mui-scroll-wrapper {
   top: 45px;
@@ -199,4 +201,7 @@ ul {
   display: block;
   padding: 0;
   border-radius: 0;
+}
+.pyg_footer .mui-bar .mui-btn {
+  top: 0px;
 }
