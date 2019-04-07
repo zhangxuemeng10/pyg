@@ -85,13 +85,13 @@
                 <img src="{{value.group_img}}" alt="">
                 {{each value.goods v i}}
                     <div class="pyg_sbox">
-                        <a href='javascript:;' class="pyg_good">
+                        <a href='./views/goodsDetail.html?goods_id={{v.goods_id}}' class="pyg_good">
                             <img src="{{v.goods_small_logo}}"
                                 alt="">
                             <div class="pyg_desc mui-ellipsis-2">{{v.goods_name}}</div>
                             <div  class="pyg_price">￥ {{v.goods_price}}</div>
                         </a>
-                        <a href="javascript:;" type="button" class="mui-btn mui-btn-primary mui-btn-outlined pyg_btncate">找相似</a>
+                        <a href="./views/goodsList.html?cid={{v.cat_id}}" type="button" class="mui-btn mui-btn-primary mui-btn-outlined pyg_btncate">找相似</a>
                     </div>
                 {{/each}}
             </div>

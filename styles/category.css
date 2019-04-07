@@ -144,6 +144,8 @@ ul {
 }
 .pyg_content {
   display: flex;
+  flex: 1;
+  overflow: hidden;
 }
 .pyg_content > .left {
   width: 100px;
@@ -151,7 +153,6 @@ ul {
 }
 .pyg_content > .left > ul {
   width: 100%;
-  padding-bottom: 34px;
 }
 .pyg_content > .left > ul > li {
   height: 50px;
@@ -181,7 +182,7 @@ ul {
   overflow: hidden;
 }
 .pyg_content > .right > .rightList {
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 .pyg_content > .right .cate2 {
   width: 100%;
