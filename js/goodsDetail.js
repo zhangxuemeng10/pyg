@@ -1,7 +1,7 @@
 $(function () {
   // 初始化区域滚动
   mui('.mui-scroll-wrapper').scroll({
-    deceleration: 0.0005, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+    deceleration: 0.0005, //flick (阻尼系数)减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
     indicators: false //是否显示滚动条，默认为True
   });
 
@@ -31,7 +31,7 @@ $(function () {
       info.goods_small_logo = result.data.goods_small_logo
       info.goods_weight = result.data.goods_weight
 
-      console.log(result)
+      // console.log(result)
       var html = template('gdTemp', result.data)
       $('.mui-scroll').html(html)
       mui('.mui-slider').slider({
@@ -48,6 +48,7 @@ $(function () {
 
     if (!mytoken) {
       // sessionStorage.setItem('redirectUrl',location.href)
+      //escape()方法会将地址中的？ = ： 转换成%的形式 （也就是对地址进行编码urlencode）。 以至于我们调用getParameter()方法时，不会出错，如果不转化地址的话，调用该方法时会得不到我们想要的路径
       location.href = './login.html?redirectUrl=' + escape(location.href)
     }
     // 2.如果有token,那么就发送请求
@@ -55,11 +56,12 @@ $(function () {
       $.ajax({
         type: 'post',
         url: 'my/cart/add',
+        //这里要看文档，文档说要字符串
         data: JSON.stringify(info),
         dataType: 'json',
         success: function (result) {
           console.log(result)
-          // 3.接收返回结果，如果是token过期，则重新登陆--重定向到登陆页
+          // 3.接收返回结果，如果是token过期，则重新登陆--重定向到登陆页面
           if (result.meta.status === 401) {
             // sessionStorage.setItem('redirectUrl',location.href)
             // location.href='./login.html'
