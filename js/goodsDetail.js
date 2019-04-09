@@ -57,7 +57,7 @@ $(function () {
         type: 'post',
         url: 'my/cart/add',
         //这里要看文档，文档说要字符串
-        data: JSON.stringify(info),
+        data: {info:JSON.stringify(info)},
         dataType: 'json',
         success: function (result) {
           console.log(result)
@@ -72,7 +72,18 @@ $(function () {
           // 4.如果有效，那么就弹出提示：添加成功，是否查看购物车
           else {
             // 提示
-            console.log('ok')
+            mui.confirm('是否跳转到购物车页面?','温馨提醒',['跳转','取消'],function(e){
+
+            if(e.index==0){
+            location.href='carts.html'
+
+            }else{
+
+            }
+
+            })
+
+            // console.log('ok')
           }
         }
       })

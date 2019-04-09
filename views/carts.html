@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="../lib/mui/css/muie.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../styles/carts.css">
+  <title>zxm-pyg</title>
+</head>
+
+<body class="eleToggle">
+  <div class="layout">
+    <header id="header" class="mui-bar mui-bar-nav">
+
+      <h1 class="mui-title">购物车</h1>
+      <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined mui-pull-left pyg_orderDel">删除</button>
+      <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined mui-pull-right pyg-orderEdit">编辑</button>
+
+    </header>
+    <div class="pyg_content">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <div class="order_content">
+            <div class="pyg_address">
+              <div>配送地址</div>
+              <div>
+                <div class="left">
+                  <span class='mui-icon mui-icon-location'></span>
+                </div>
+                <div class="right">
+                  <div>默认地址</div>
+                  <div>广东省广州市天河区58号</div>
+                </div>
+              </div>
+            </div>
+            <div class="pyg_totalPrice">
+              <div>总价</div>
+              <div>
+                <div class="left">总价:<span class='price'>￥ 12345</span></div>
+                <a href="javascript:;" class="right">生成订单</a>
+
+              </div>
+            </div>
+            <div class="pyg_order">
+              <div>订单</div>
+              <div class="order_list">
+         
+       
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="pyg_footer">
+      <nav class="mui-bar mui-bar-tab">
+        <a class="mui-tab-item " href="../index.html">
+          <span class="mui-icon mui-icon-home"></span>
+          <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="./category.html">
+          <span class="mui-icon mui-icon-list"></span>
+          <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item  mui-active" href="#tabbar-with-contact">
+          <span class="mui-icon-extra mui-icon-extra-cart"></span>
+          <div class="mui-tab-label pyg_cart">购物车</div>
+        </a>
+        <a class="mui-tab-item" href="#tabbar-with-map">
+          <span class="mui-icon mui-icon-contact"></span>
+          <span class="mui-tab-label">我的</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+  <script type='text/template' id='orderTemp'>
+{{each list value index}}
+       <div class="order-singer" data-order='{{value}}'>
+                  <div class="mui-input-row mui-checkbox mui-left">
+                    <label></label>
+                    <input name="checkbox" value="Item 2" type="checkbox" checked="">
+                  </div>
+
+
+                  <div class="pyg_oimg">
+                    <img src="{{value.goods_small_logo}}" alt="">
+                  </div>
+                  
+                  <div>
+                    <div class='mui-ellipsis-2'>{{value.goods_name}}</div>
+                    <div class="mui-numbox pyg_userNum" data-numbox-min="1" data-numbox-max="{{value.goods_number}}">
+                      <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                      <input id="test" class="mui-input-numbox" type="number" value="{{value.amount}}">
+                      <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                    </div>
+                    <div>￥ {{value.goods_price}}</div>
+                  </div>
+                </div>
+
+{{/each}}
+  </script>
+  <script src="../lib/mui/js/mui.min.js"></script>
+  <script src="../lib/zepto/zepto.js"></script>
+  <script src="../lib/arttemplate/template-web.js"></script>
+  <script src="../lib/iscroll/iscroll.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/carts.js"></script>
+</body>
+
+</html>

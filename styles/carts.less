@@ -1,0 +1,142 @@
+@import './reset.less';
+@import './common.less';
+
+
+.pyg_content {
+  overflow: hidden;
+  padding-top: 45px;
+  flex: 1;
+  position: relative;
+
+  .mui-scroll-wrapper {
+    top: 45px;
+    bottom: 10px;
+  }
+
+  .order_content {
+    padding: 20px 10px;
+
+    .pyg_address {
+      >div:nth-of-type(1) {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 5px;
+
+      }
+
+      >div:nth-of-type(2) {
+
+        background-color: #fff;
+        display: flex;
+
+        .left {
+
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .right {
+          flex: 9;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          div:nth-of-type(1) {
+            font-size: 15px;
+     
+          }
+
+          div:nth-of-type(2) {
+            font-size: 13px;
+            color: #888;
+
+          }
+        }
+      }
+
+    }
+
+    .pyg_totalPrice {
+      margin: 20px 0;
+
+      >div:nth-of-type(1) {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 5px;
+
+      }
+
+      >div:nth-of-type(2) {
+        height: 40px;
+        line-height: 40px;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+
+        .price {
+          color: red;
+        }
+
+      }
+
+    }
+
+    .pyg_order {
+      >div:nth-of-type(1) {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 5px;
+      }
+
+      .order-singer {
+        background-color: #fff;
+        display: flex;
+margin-bottom: 5px;
+
+        >div:nth-of-type(1) {
+
+          flex: 2;
+
+          >input {
+            margin-top: 30px;
+          }
+        }
+
+        >div:nth-of-type(2) {
+          flex: 2;
+                 img {
+                   width: 90%;
+                   display: block;
+                 }
+        }
+
+        >div:nth-of-type(3) {
+          flex: 6;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          >div:nth-of-type(1) {
+            font-size: 13px;
+          }
+
+          >div:nth-of-type(3) {
+            font-size: 13px;
+          }
+        }
+
+      }
+
+    }
+  }
+}
+.eleToggle {
+  .pyg_orderDel,
+  .mui-checkbox {
+    display: none;
+  }
+}

@@ -35,7 +35,7 @@ $(function () {
           if (re) {
             location.href = unescape(re)
           } else {
-            location.href = '/index.html'
+            location.href = '../index.html'
           }
         } else {
           mui.toast(result.meta.msg)
