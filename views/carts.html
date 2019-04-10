@@ -8,6 +8,8 @@
 
   <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="../lib/mui/css/muie.css">
+  <link rel="stylesheet" href="../lib/mui/css/mui.picker.css">
+  <link rel="stylesheet" href="../lib/mui/css/mui.poppicker.css">
   <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
   <link rel="stylesheet" href="../styles/carts.css">
   <title>zxm-pyg</title>
@@ -34,23 +36,24 @@
                 </div>
                 <div class="right">
                   <div>默认地址</div>
-                  <div>广东省广州市天河区58号</div>
+                  <div class="userAddress">广东省广州市天河区58号</div>
                 </div>
+                <span class="selectAddress" style='font-size: 13px;line-height: 40px;'>选择地址</span>
               </div>
             </div>
             <div class="pyg_totalPrice">
               <div>总价</div>
               <div>
                 <div class="left">总价:<span class='price'>￥ 12345</span></div>
-                <a href="javascript:;" class="right">生成订单</a>
+                <a href="javascript:;" class="right pyg_createOrder">生成订单</a>
 
               </div>
             </div>
             <div class="pyg_order">
               <div>订单</div>
               <div class="order_list">
-         
-       
+
+
               </div>
             </div>
           </div>
@@ -70,7 +73,7 @@
         </a>
         <a class="mui-tab-item  mui-active" href="#tabbar-with-contact">
           <span class="mui-icon-extra mui-icon-extra-cart"></span>
-          <div class="mui-tab-label pyg_cart">购物车</div>
+          <div class="mui-tab-label pyg_cart" style='font-size: 13px;'>购物车</div>
         </a>
         <a class="mui-tab-item" href="#tabbar-with-map">
           <span class="mui-icon mui-icon-contact"></span>
@@ -106,10 +109,13 @@
 {{/each}}
   </script>
   <script src="../lib/mui/js/mui.min.js"></script>
+  <script src="../lib/mui/js/mui.picker.js"></script>
+  <script src="../lib/mui/js/mui.poppicker.js"></script>
   <script src="../lib/zepto/zepto.js"></script>
   <script src="../lib/arttemplate/template-web.js"></script>
   <script src="../lib/iscroll/iscroll.js"></script>
   <script src="../js/common.js"></script>
+  <script src="../data/citys.js"></script>
   <script src="../js/carts.js"></script>
 </body>
 
