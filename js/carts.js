@@ -15,7 +15,8 @@ $(function () {
       success: function (result) {
         // console.log(result);
         if (result.meta.status == 401) {
-          location.href = './login.html'
+          // location.href = './login.html'
+          location.href = './login.html?redirectUrl=' + escape(location.href)
         } else {
           var data = JSON.parse(result.data.cart_info)
 
@@ -67,7 +68,7 @@ $(function () {
     }
     $.ajax({
       type: 'post',
-      url: 'my/cart/all',
+      url: 'my/cart/sync',
       data: { 'infos': JSON.stringify(list_obj) },
       dataType: 'json',
       success: function (result) {
